@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "ZMCALayerTestViewController.h"
 
 @interface MasterViewController ()
 
@@ -30,9 +31,14 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    _mDatas = [[NSMutableArray alloc] init];
+    [_mDatas addObject:@"CoreText"];
+    [_mDatas addObject:@"CALayer"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,23 +70,43 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
+//        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
+        UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        if (indexPath.row == 0) {
+            NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+            DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+            [controller setDetailItem:object];
+            controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+            controller.navigationItem.leftItemsSupplementBackButton = YES;
+        }
+        else if (indexPath.row == 1){
+            NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+            UINavigationController *naviController = (UINavigationController *)[segue destinationViewController];
+            
+            ZMCALayerTestViewController *controller = (ZMCALayerTestViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMCALayerTestViewController"];
+            
+            [naviController pushViewController:controller animated:YES];
+            
+//            controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+//            controller.navigationItem.leftItemsSupplementBackButton = YES;
+        }
+        
     }
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections] count];
+//    return [[self.fetchedResultsController sections] count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+//    return [sectionInfo numberOfObjects];
+    return [_mDatas count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,22 +122,26 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-            
-        NSError *error = nil;
-        if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
+        [_mDatas removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+//        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+//        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+//            
+//        NSError *error = nil;
+//        if (![context save:&error]) {
+//            // Replace this implementation with code to handle the error appropriately.
+//            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+//            abort();
+//        }
     }
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+//    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+//    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    NSString *object = [_mDatas objectAtIndex:indexPath.row];
+    cell.textLabel.text = object;
 }
 
 #pragma mark - Fetched results controller
