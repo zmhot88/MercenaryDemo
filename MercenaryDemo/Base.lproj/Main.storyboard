@@ -96,6 +96,24 @@
             </objects>
             <point key="canvasLocation" x="688" y="1083"/>
         </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="0Sa-43-CxB">
+            <objects>
+                <viewController storyboardIdentifier="ZMAnimationViewController" id="Xg5-Eg-oyi" customClass="ZMAnimationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iM4-ON-4a4"/>
+                        <viewControllerLayoutGuide type="bottom" id="O4P-kM-jJG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pjl-iE-5aI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2d0-CA-3Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="1950"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>

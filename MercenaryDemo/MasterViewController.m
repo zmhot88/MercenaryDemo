@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "ZMCALayerTestViewController.h"
+#import "ZMAnimationViewController.h"
 
 @interface MasterViewController ()
 
@@ -38,6 +39,7 @@
     _mDatas = [[NSMutableArray alloc] init];
     [_mDatas addObject:@"CoreText"];
     [_mDatas addObject:@"CALayer"];
+    [_mDatas addObject:@"CAAnimation"];
     
 }
 
@@ -89,8 +91,15 @@
             
             [naviController pushViewController:controller animated:YES];
             
-//            controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//            controller.navigationItem.leftItemsSupplementBackButton = YES;
+        }
+        else if (indexPath.row == 2){
+            NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+            UINavigationController *naviController = (UINavigationController *)[segue destinationViewController];
+            
+            ZMAnimationViewController *controller = (ZMAnimationViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMAnimationViewController"];
+            
+            [naviController pushViewController:controller animated:YES];
+            
         }
         
     }

@@ -7,8 +7,10 @@
 //
 
 #import "ZMCALayerTestViewController.h"
+#import "ZMView.h"
 
 #define WIDTH 50
+#define PHOTO_HEIGHT 150
 
 @interface ZMCALayerTestViewController ()
 
@@ -21,8 +23,64 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //1.
+//    [self drawMyLayer];
     
-    [self drawMyLayer];
+    //2.
+//    //自定义图层
+//    CALayer *layer = [[CALayer alloc] init];
+//    layer.bounds = CGRectMake(0, 0, PHOTO_HEIGHT, PHOTO_HEIGHT);
+//    layer.position = CGPointMake(160, 200);
+//    layer.backgroundColor = [UIColor redColor].CGColor;
+//    layer.cornerRadius = PHOTO_HEIGHT/2;
+//    layer.masksToBounds = YES;
+//    layer.borderColor = [UIColor greenColor].CGColor;
+//    layer.borderWidth = 2;
+//    
+//    layer.delegate = self;
+//    [self.view.layer addSublayer:layer];
+//    [layer setNeedsDisplay];
+    
+//    //3,双图层
+//    CGPoint position= CGPointMake(160, 200);
+//    CGRect bounds = CGRectMake(0, 0, PHOTO_HEIGHT, PHOTO_HEIGHT);
+//    CGFloat cornerRadius = PHOTO_HEIGHT/2;
+//    CGFloat borderWidth = 2;
+//    
+//    //阴影图层
+//    CALayer *layerShadow = [[CALayer alloc] init];
+//    layerShadow.bounds = bounds;
+//    layerShadow.position = position;
+//    layerShadow.cornerRadius = cornerRadius;
+//    layerShadow.shadowColor = [UIColor grayColor].CGColor;
+//    layerShadow.shadowOffset = CGSizeMake(2, 1);
+//    layerShadow.shadowOpacity = 1;
+//    layerShadow.borderColor = [UIColor greenColor].CGColor;
+//    layerShadow.borderWidth = borderWidth;
+//    [self.view.layer addSublayer:layerShadow];
+//    
+//    //容器图层
+//    CALayer *layer = [[CALayer alloc] init];
+//    layer.bounds = bounds;
+//    layer.position = position;
+//    layer.backgroundColor = [UIColor redColor].CGColor;
+//    layer.cornerRadius = cornerRadius;
+//    layer.masksToBounds = YES;
+//    layer.borderColor = [UIColor whiteColor].CGColor;
+//    layer.borderWidth = borderWidth;
+//    
+//    layer.transform = CATransform3DMakeRotation(M_PI, 1, 0, 0);
+//    
+//    layer.delegate = self;
+//    [self.view.layer addSublayer:layer];
+//    [layer setNeedsDisplay];
+    
+    //4 自定义图层
+    ZMView *view=[[ZMView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    view.backgroundColor=[UIColor colorWithRed:249.0/255.0 green:249.0/255.0 blue:249.0/255.0 alpha:1];
+    
+    [self.view addSubview:view];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,8 +142,23 @@
     NSLog(@"sublayer count: %d", self.view.layer.sublayers.count);
     self.mLayer.bounds = CGRectMake(0, 0, width, width);
     self.mLayer.position = [touch locationInView:self.view];
-    self.mLayer.backgroundColor = [UIColor redColor].CGColor;
+//    self.mLayer.backgroundColor = [UIColor redColor].CGColor;
     self.mLayer.cornerRadius = width/2;
+}
+
+
+#pragma mark 绘制图行，图像到图层
+-(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
+{
+//    CGContextSaveGState(ctx);
+//    
+//    CGContextScaleCTM(ctx, 1, -1);
+//    CGContextTranslateCTM(ctx, 0, -PHOTO_HEIGHT);
+    
+    UIImage *image = [UIImage imageNamed:@"photo"];
+    CGContextDrawImage(ctx, CGRectMake(0, 0, PHOTO_HEIGHT, PHOTO_HEIGHT), image.CGImage);
+    
+//    CGContextRestoreGState(ctx);
 }
 
 @end
