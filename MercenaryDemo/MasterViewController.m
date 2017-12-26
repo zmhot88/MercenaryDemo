@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 #import "ZMCALayerTestViewController.h"
 #import "ZMAnimationViewController.h"
+#import "ZMTableViewController.h"
 
 @interface MasterViewController ()
 
@@ -40,6 +41,7 @@
     [_mDatas addObject:@"CoreText"];
     [_mDatas addObject:@"CALayer"];
     [_mDatas addObject:@"CAAnimation"];
+    [_mDatas addObject:@"ZMTableViewController"];
     
 }
 
@@ -74,32 +76,12 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 //        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
         
-        UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
         if (indexPath.row == 0) {
             NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
             DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
             [controller setDetailItem:object];
             controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
             controller.navigationItem.leftItemsSupplementBackButton = YES;
-        }
-        else if (indexPath.row == 1){
-            NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
-            UINavigationController *naviController = (UINavigationController *)[segue destinationViewController];
-            
-            ZMCALayerTestViewController *controller = (ZMCALayerTestViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMCALayerTestViewController"];
-            
-            [naviController pushViewController:controller animated:YES];
-            
-        }
-        else if (indexPath.row == 2){
-            NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
-            UINavigationController *naviController = (UINavigationController *)[segue destinationViewController];
-            
-            ZMAnimationViewController *controller = (ZMAnimationViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMAnimationViewController"];
-            
-            [naviController pushViewController:controller animated:YES];
-            
         }
         
     }
@@ -143,6 +125,42 @@
 //            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 //            abort();
 //        }
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    if (indexPath.row == 0) {
+        NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+        DetailViewController *controller = (DetailViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+        [controller setDetailItem:object];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+        
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if (indexPath.row == 1){
+//        NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+        ZMCALayerTestViewController *controller = (ZMCALayerTestViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMCALayerTestViewController"];
+        
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if (indexPath.row == 2){
+//        NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+        
+        ZMAnimationViewController *controller = (ZMAnimationViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"ZMAnimationViewController"];
+
+        [self.navigationController pushViewController:controller animated:YES];
+        
+    }
+    else if (indexPath.row == 3){
+        //        NSManagedObject *object = [self.mDatas objectAtIndex:indexPath.row];
+        ZMTableViewController *controller = [[ZMTableViewController alloc] initWithNibName:@"ZMTableViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+        
     }
 }
 
