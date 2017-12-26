@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const kXYNoDataViewObserveKeyPath = @"kXYNoDataViewObserveKeyPath";
+
 @interface PlaceholderView : UIView
 
 @end

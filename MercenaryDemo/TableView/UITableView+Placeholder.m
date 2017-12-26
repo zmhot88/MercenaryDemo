@@ -22,7 +22,6 @@
 @implementation UITableView (Placeholder)
 
 static NSString * const kXYTableViewPropertyInitFinish = @"kXYTableViewPropertyInitFinish";
-static NSString * const kXYNoDataViewObserveKeyPath = @"kXYNoDataViewObserveKeyPath";
 
 /**
  设置已经加载完成数据了
@@ -41,9 +40,17 @@ static NSString * const kXYNoDataViewObserveKeyPath = @"kXYNoDataViewObserveKeyP
 
 +(void)load
 {
-    Method reloadData = class_getInstanceMethod(self, @selector(reloadData));
-    Method xy_reloadData = class_getInstanceMethod(self, @selector(xy_reloadData));
-    method_exchangeImplementations(reloadData, xy_reloadData);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        Method reloadData = class_getInstanceMethod(self, @selector(reloadData));
+        Method xy_reloadData = class_getInstanceMethod(self, @selector(xy_reloadData));
+        method_exchangeImplementations(reloadData, xy_reloadData);
+        
+        Method dealloc       = class_getInstanceMethod(self, NSSelectorFromString(@"dealloc"));
+        Method xy_dealloc    = class_getInstanceMethod(self, @selector(xy_dealloc));
+        method_exchangeImplementations(dealloc, xy_dealloc);
+    });
 }
 
 -(void)xy_reloadData
@@ -168,6 +175,20 @@ static NSString * const kXYNoDataViewObserveKeyPath = @"kXYNoDataViewObserveKeyP
         }
     }
 }
+/**
+ 移除 KVO 监听
+ */
+- (void)freeNoDataViewIfNeeded {
+    
+    if ([self.backgroundView isKindOfClass:[PlaceholderView class]]) {
+        [self.backgroundView removeObserver:self forKeyPath:kXYNoDataViewObserveKeyPath context:nil];
+    }
+}
 
+- (void)xy_dealloc {
+    [self freeNoDataViewIfNeeded];
+    [self xy_dealloc];
+    NSLog(@"TableView + XY 视图正常销毁");
+}
 
 @end

@@ -38,6 +38,7 @@
 		7E00AE211FF235B100B0E16D /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE0A1FF235B100B0E16D /* MJRefreshBackFooter.m */; };
 		7E00AE221FF235B100B0E16D /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE0B1FF235B100B0E16D /* MJRefreshAutoFooter.m */; };
 		7E00AE231FF235B100B0E16D /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE0D1FF235B100B0E16D /* MJRefreshComponent.m */; };
+		7E00AE261FF237CF00B0E16D /* UICollectionView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE251FF237CF00B0E16D /* UICollectionView+XY.m */; };
 		D59F01241B74A7A500697DAF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01231B74A7A500697DAF /* CoreText.framework */; };
 		D59F01261B74A7AB00697DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01251B74A7AB00697DAF /* CoreGraphics.framework */; };
 		D59F01281B74A7D400697DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01271B74A7D400697DAF /* UIKit.framework */; };
@@ -123,6 +124,8 @@
 		7E00AE0D1FF235B100B0E16D /* MJRefreshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
 		7E00AE0E1FF235B100B0E16D /* MJRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
 		7E00AE0F1FF235B100B0E16D /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		7E00AE241FF237CF00B0E16D /* UICollectionView+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+XY.h"; path = "../../../../Downloads/XYTableViewNoDataView-master/XYTableViewNoDataViewDemo/XYTableViewNoDataView/UICollectionView+XY.h"; sourceTree = "<group>"; };
+		7E00AE251FF237CF00B0E16D /* UICollectionView+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+XY.m"; path = "../../../../Downloads/XYTableViewNoDataView-master/XYTableViewNoDataViewDemo/XYTableViewNoDataView/UICollectionView+XY.m"; sourceTree = "<group>"; };
 		D59F01231B74A7A500697DAF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		D59F01251B74A7AB00697DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D59F01271B74A7D400697DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -201,6 +204,8 @@
 		7E00ADA81FF11C8700B0E16D /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				7E00AE241FF237CF00B0E16D /* UICollectionView+XY.h */,
+				7E00AE251FF237CF00B0E16D /* UICollectionView+XY.m */,
 				7E00ADE11FF235B100B0E16D /* MJRefresh */,
 				7E00ADA91FF11CD600B0E16D /* UITableView+Placeholder.h */,
 				7E00ADAA1FF11CD600B0E16D /* UITableView+Placeholder.m */,
@@ -503,6 +508,7 @@
 				D5C9A5F21B68A0D000219962 /* AppDelegate.m in Sources */,
 				7E00AE211FF235B100B0E16D /* MJRefreshBackFooter.m in Sources */,
 				D5C9A5EF1B68A0D000219962 /* main.m in Sources */,
+				7E00AE261FF237CF00B0E16D /* UICollectionView+XY.m in Sources */,
 				7E00AE1D1FF235B100B0E16D /* MJRefreshStateHeader.m in Sources */,
 				7E00AE151FF235B100B0E16D /* UIView+MJExtension.m in Sources */,
 				7E00AE181FF235B100B0E16D /* MJRefreshBackNormalFooter.m in Sources */,
