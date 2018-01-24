@@ -41,7 +41,8 @@
     [_mDatas addObject:@"CoreText"];
     [_mDatas addObject:@"CALayer"];
     [_mDatas addObject:@"CAAnimation"];
-    [_mDatas addObject:@"ZMTableViewController"];
+    [_mDatas addObject:@"自带占位图的TableView"];
+    [_mDatas addObject:@"CoreML Demo"];
     
 }
 
@@ -161,6 +162,10 @@
         ZMTableViewController *controller = [[ZMTableViewController alloc] initWithNibName:@"ZMTableViewController" bundle:nil];
         [self.navigationController pushViewController:controller animated:YES];
         
+    }
+    else if (indexPath.row == 4){
+        MLDemoViewController *controller = [[MLDemoViewController alloc] initWithNibName:@"MLDemoViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
