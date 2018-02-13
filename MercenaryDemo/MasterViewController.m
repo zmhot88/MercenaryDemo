@@ -11,6 +11,7 @@
 #import "ZMCALayerTestViewController.h"
 #import "ZMAnimationViewController.h"
 #import "ZMTableViewController.h"
+#import "PushUpViewController.h"
 
 @interface MasterViewController ()
 
@@ -43,7 +44,7 @@
     [_mDatas addObject:@"CAAnimation"];
     [_mDatas addObject:@"自带占位图的TableView"];
     [_mDatas addObject:@"CoreML Demo"];
-    
+    [_mDatas addObject:@"Push Up"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -165,6 +166,10 @@
     }
     else if (indexPath.row == 4){
         MLDemoViewController *controller = [[MLDemoViewController alloc] initWithNibName:@"MLDemoViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if (indexPath.row == 5){
+        PushUpViewController *controller = [[PushUpViewController alloc] initWithNibName:@"PushUpViewController" bundle:nil];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

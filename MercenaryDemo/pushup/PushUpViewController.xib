@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PushUpViewController">
+            <connections>
+                <outlet property="controllBtn" destination="NKt-cl-UT6" id="wky-d8-mVb"/>
+                <outlet property="numLbl" destination="zvU-sI-yop" id="4S2-rK-EY7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvU-sI-yop">
+                    <rect key="frame" x="144" y="198" width="86" height="89"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="89" id="hSa-o8-e3e"/>
+                        <constraint firstAttribute="width" constant="86" id="jes-TM-yUW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKt-cl-UT6">
+                    <rect key="frame" x="144" y="381" width="86" height="66"/>
+                    <color key="backgroundColor" red="0.17403931659999999" green="1" blue="0.8062447331" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="4WN-M5-VMs"/>
+                        <constraint firstAttribute="width" constant="86" id="98G-EH-VzS"/>
+                    </constraints>
+                    <state key="normal" title="start"/>
+                    <connections>
+                        <action selector="controllAction:" destination="-1" eventType="touchUpInside" id="oGN-Gt-JN5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zvU-sI-yop" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="9tr-Na-l0R"/>
+                <constraint firstItem="NKt-cl-UT6" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="DI8-Cw-r97"/>
+                <constraint firstItem="NKt-cl-UT6" firstAttribute="top" secondItem="zvU-sI-yop" secondAttribute="bottom" constant="94" id="Y34-bE-Kiv"/>
+                <constraint firstItem="zvU-sI-yop" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="178" id="lpW-hQ-Cyi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="32.5" y="63.5"/>
+        </view>
+    </objects>
+</document>

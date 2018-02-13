@@ -39,10 +39,12 @@
 		7E00AE221FF235B100B0E16D /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE0B1FF235B100B0E16D /* MJRefreshAutoFooter.m */; };
 		7E00AE231FF235B100B0E16D /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE0D1FF235B100B0E16D /* MJRefreshComponent.m */; };
 		7E00AE261FF237CF00B0E16D /* UICollectionView+XY.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E00AE251FF237CF00B0E16D /* UICollectionView+XY.m */; };
-		7EBBFB0520186B5500DA2CFE /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0420186B5500DA2CFE /* MobileNet.mlmodel */; };
+		7E3EE85E2032669500CB42CB /* PushUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EE85C2032669500CB42CB /* PushUpViewController.m */; };
+		7E3EE85F2032669500CB42CB /* PushUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3EE85D2032669500CB42CB /* PushUpViewController.xib */; };
+		7E3EE86220326ADB00CB42CB /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EE86020326ADB00CB42CB /* Resnet50.mlmodel */; };
+		7E3EE86320326ADB00CB42CB /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EE86120326ADB00CB42CB /* MobileNet.mlmodel */; };
 		7EBBFB0920186B9F00DA2CFE /* MLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0720186B9F00DA2CFE /* MLDemoViewController.swift */; };
 		7EBBFB0A20186B9F00DA2CFE /* MLDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0820186B9F00DA2CFE /* MLDemoViewController.xib */; };
-		7EBBFB0E2018891B00DA2CFE /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0D2018891B00DA2CFE /* Resnet50.mlmodel */; };
 		D59F01241B74A7A500697DAF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01231B74A7A500697DAF /* CoreText.framework */; };
 		D59F01261B74A7AB00697DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01251B74A7AB00697DAF /* CoreGraphics.framework */; };
 		D59F01281B74A7D400697DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01271B74A7D400697DAF /* UIKit.framework */; };
@@ -130,11 +132,14 @@
 		7E00AE0F1FF235B100B0E16D /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
 		7E00AE241FF237CF00B0E16D /* UICollectionView+XY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UICollectionView+XY.h"; path = "../../../../Downloads/XYTableViewNoDataView-master/XYTableViewNoDataViewDemo/XYTableViewNoDataView/UICollectionView+XY.h"; sourceTree = "<group>"; };
 		7E00AE251FF237CF00B0E16D /* UICollectionView+XY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+XY.m"; path = "../../../../Downloads/XYTableViewNoDataView-master/XYTableViewNoDataViewDemo/XYTableViewNoDataView/UICollectionView+XY.m"; sourceTree = "<group>"; };
-		7EBBFB0420186B5500DA2CFE /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNet.mlmodel; path = ../../../../Downloads/MobileNet.mlmodel; sourceTree = "<group>"; };
+		7E3EE85B2032669500CB42CB /* PushUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushUpViewController.h; sourceTree = "<group>"; };
+		7E3EE85C2032669500CB42CB /* PushUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushUpViewController.m; sourceTree = "<group>"; };
+		7E3EE85D2032669500CB42CB /* PushUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PushUpViewController.xib; sourceTree = "<group>"; };
+		7E3EE86020326ADB00CB42CB /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
+		7E3EE86120326ADB00CB42CB /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		7EBBFB0620186B9F00DA2CFE /* MercenaryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MercenaryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7EBBFB0720186B9F00DA2CFE /* MLDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLDemoViewController.swift; sourceTree = "<group>"; };
 		7EBBFB0820186B9F00DA2CFE /* MLDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLDemoViewController.xib; sourceTree = "<group>"; };
-		7EBBFB0D2018891B00DA2CFE /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 		D59F01231B74A7A500697DAF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		D59F01251B74A7AB00697DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D59F01271B74A7D400697DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -324,11 +329,21 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		7E3EE85A2032667B00CB42CB /* pushup */ = {
+			isa = PBXGroup;
+			children = (
+				7E3EE85B2032669500CB42CB /* PushUpViewController.h */,
+				7E3EE85C2032669500CB42CB /* PushUpViewController.m */,
+				7E3EE85D2032669500CB42CB /* PushUpViewController.xib */,
+			);
+			path = pushup;
+			sourceTree = "<group>";
+		};
 		7EBBFB03201868FC00DA2CFE /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
-				7EBBFB0D2018891B00DA2CFE /* Resnet50.mlmodel */,
-				7EBBFB0420186B5500DA2CFE /* MobileNet.mlmodel */,
+				7E3EE86120326ADB00CB42CB /* MobileNet.mlmodel */,
+				7E3EE86020326ADB00CB42CB /* Resnet50.mlmodel */,
 				7EBBFB0720186B9F00DA2CFE /* MLDemoViewController.swift */,
 				7EBBFB0820186B9F00DA2CFE /* MLDemoViewController.xib */,
 			);
@@ -361,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				7EBBFB0620186B9F00DA2CFE /* MercenaryDemo-Bridging-Header.h */,
+				7E3EE85A2032667B00CB42CB /* pushup */,
 				7EBBFB03201868FC00DA2CFE /* CoreML */,
 				7E00ADA81FF11C8700B0E16D /* TableView */,
 				7E00AD931FF11C2B00B0E16D /* CALayer */,
@@ -493,6 +509,7 @@
 				D5C9A6031B68A0D000219962 /* LaunchScreen.xib in Resources */,
 				7E00AE121FF235B100B0E16D /* MJRefresh.bundle in Resources */,
 				7E00ADD91FF1EECF00B0E16D /* PlaceholderView.xib in Resources */,
+				7E3EE85F2032669500CB42CB /* PushUpViewController.xib in Resources */,
 				7E00ADE01FF1FA8F00B0E16D /* ZMTableViewController.xib in Resources */,
 				D5C9A6001B68A0D000219962 /* Images.xcassets in Resources */,
 			);
@@ -520,14 +537,15 @@
 				7E00AE1B1FF235B100B0E16D /* MJRefreshAutoNormalFooter.m in Sources */,
 				7E00AE201FF235B100B0E16D /* MJRefreshHeader.m in Sources */,
 				7E00AE1C1FF235B100B0E16D /* MJRefreshNormalHeader.m in Sources */,
-				7EBBFB0520186B5500DA2CFE /* MobileNet.mlmodel in Sources */,
 				7E00AE231FF235B100B0E16D /* MJRefreshComponent.m in Sources */,
-				7EBBFB0E2018891B00DA2CFE /* Resnet50.mlmodel in Sources */,
 				7E00ADA01FF11C5300B0E16D /* ZMAnimationViewController.m in Sources */,
+				7E3EE86220326ADB00CB42CB /* Resnet50.mlmodel in Sources */,
 				7E00AE141FF235B100B0E16D /* NSBundle+MJRefresh.m in Sources */,
 				7E00AD9B1FF11C2C00B0E16D /* ZMView.m in Sources */,
+				7E3EE86320326ADB00CB42CB /* MobileNet.mlmodel in Sources */,
 				7E00ADA71FF11C7700B0E16D /* DetailViewController.m in Sources */,
 				7E00ADAB1FF11CD600B0E16D /* UITableView+Placeholder.m in Sources */,
+				7E3EE85E2032669500CB42CB /* PushUpViewController.m in Sources */,
 				D5C9A5F81B68A0D000219962 /* MasterViewController.m in Sources */,
 				7E00AE1F1FF235B100B0E16D /* MJRefreshFooter.m in Sources */,
 				7E00AE161FF235B100B0E16D /* MJRefreshBackGifFooter.m in Sources */,
