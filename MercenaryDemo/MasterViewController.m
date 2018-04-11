@@ -12,6 +12,9 @@
 #import "ZMAnimationViewController.h"
 #import "ZMTableViewController.h"
 #import "PushUpViewController.h"
+#import "CacheWebViewViewController.h"
+
+#import "ZM_ProgressiveRingViewController.h"
 
 @interface MasterViewController ()
 
@@ -45,6 +48,8 @@
     [_mDatas addObject:@"自带占位图的TableView"];
     [_mDatas addObject:@"CoreML Demo"];
     [_mDatas addObject:@"Push Up"];
+    [_mDatas addObject:@"WebView缓存"];
+    [_mDatas addObject:@"环形渐进色"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -170,6 +175,14 @@
     }
     else if (indexPath.row == 5){
         PushUpViewController *controller = [[PushUpViewController alloc] initWithNibName:@"PushUpViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if (indexPath.row == 6){
+        CacheWebViewViewController *controller = [[CacheWebViewViewController alloc] initWithNibName:@"CacheWebViewViewController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    else if (indexPath.row == 7){
+        ZM_ProgressiveRingViewController *controller = [[ZM_ProgressiveRingViewController alloc] initWithNibName:@"ZM_ProgressiveRingViewController" bundle:nil];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

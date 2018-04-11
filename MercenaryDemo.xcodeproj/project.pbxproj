@@ -45,6 +45,11 @@
 		7E3EE86320326ADB00CB42CB /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7E3EE86120326ADB00CB42CB /* MobileNet.mlmodel */; };
 		7EBBFB0920186B9F00DA2CFE /* MLDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0720186B9F00DA2CFE /* MLDemoViewController.swift */; };
 		7EBBFB0A20186B9F00DA2CFE /* MLDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBFB0820186B9F00DA2CFE /* MLDemoViewController.xib */; };
+		7EDA3EC920453FBB00C92653 /* CacheWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EDA3EC720453FBB00C92653 /* CacheWebViewViewController.m */; };
+		7EDA3ECA20453FBB00C92653 /* CacheWebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EDA3EC820453FBB00C92653 /* CacheWebViewViewController.xib */; };
+		7EF5B55A207DA69B001EBD0A /* ZM_ProgressiveRingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5B558207DA69B001EBD0A /* ZM_ProgressiveRingViewController.m */; };
+		7EF5B55B207DA69B001EBD0A /* ZM_ProgressiveRingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF5B559207DA69B001EBD0A /* ZM_ProgressiveRingViewController.xib */; };
+		7EF5B55E207DA6D9001EBD0A /* ZM_ProgressiveRingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF5B55D207DA6D9001EBD0A /* ZM_ProgressiveRingView.m */; };
 		D59F01241B74A7A500697DAF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01231B74A7A500697DAF /* CoreText.framework */; };
 		D59F01261B74A7AB00697DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01251B74A7AB00697DAF /* CoreGraphics.framework */; };
 		D59F01281B74A7D400697DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59F01271B74A7D400697DAF /* UIKit.framework */; };
@@ -140,6 +145,14 @@
 		7EBBFB0620186B9F00DA2CFE /* MercenaryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MercenaryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7EBBFB0720186B9F00DA2CFE /* MLDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLDemoViewController.swift; sourceTree = "<group>"; };
 		7EBBFB0820186B9F00DA2CFE /* MLDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLDemoViewController.xib; sourceTree = "<group>"; };
+		7EDA3EC620453FBB00C92653 /* CacheWebViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheWebViewViewController.h; sourceTree = "<group>"; };
+		7EDA3EC720453FBB00C92653 /* CacheWebViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheWebViewViewController.m; sourceTree = "<group>"; };
+		7EDA3EC820453FBB00C92653 /* CacheWebViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CacheWebViewViewController.xib; sourceTree = "<group>"; };
+		7EF5B557207DA69B001EBD0A /* ZM_ProgressiveRingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZM_ProgressiveRingViewController.h; sourceTree = "<group>"; };
+		7EF5B558207DA69B001EBD0A /* ZM_ProgressiveRingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZM_ProgressiveRingViewController.m; sourceTree = "<group>"; };
+		7EF5B559207DA69B001EBD0A /* ZM_ProgressiveRingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZM_ProgressiveRingViewController.xib; sourceTree = "<group>"; };
+		7EF5B55C207DA6D9001EBD0A /* ZM_ProgressiveRingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZM_ProgressiveRingView.h; sourceTree = "<group>"; };
+		7EF5B55D207DA6D9001EBD0A /* ZM_ProgressiveRingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZM_ProgressiveRingView.m; sourceTree = "<group>"; };
 		D59F01231B74A7A500697DAF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		D59F01251B74A7AB00697DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D59F01271B74A7D400697DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -350,6 +363,28 @@
 			path = CoreML;
 			sourceTree = "<group>";
 		};
+		7EDA3EC520453FAA00C92653 /* WebViewCache */ = {
+			isa = PBXGroup;
+			children = (
+				7EDA3EC620453FBB00C92653 /* CacheWebViewViewController.h */,
+				7EDA3EC720453FBB00C92653 /* CacheWebViewViewController.m */,
+				7EDA3EC820453FBB00C92653 /* CacheWebViewViewController.xib */,
+			);
+			path = WebViewCache;
+			sourceTree = "<group>";
+		};
+		7EF5B556207DA602001EBD0A /* ProgressiveRing */ = {
+			isa = PBXGroup;
+			children = (
+				7EF5B557207DA69B001EBD0A /* ZM_ProgressiveRingViewController.h */,
+				7EF5B558207DA69B001EBD0A /* ZM_ProgressiveRingViewController.m */,
+				7EF5B559207DA69B001EBD0A /* ZM_ProgressiveRingViewController.xib */,
+				7EF5B55C207DA6D9001EBD0A /* ZM_ProgressiveRingView.h */,
+				7EF5B55D207DA6D9001EBD0A /* ZM_ProgressiveRingView.m */,
+			);
+			path = ProgressiveRing;
+			sourceTree = "<group>";
+		};
 		D5C9A5E01B68A0D000219962 = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +410,8 @@
 		D5C9A5EB1B68A0D000219962 /* MercenaryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7EF5B556207DA602001EBD0A /* ProgressiveRing */,
+				7EDA3EC520453FAA00C92653 /* WebViewCache */,
 				7EBBFB0620186B9F00DA2CFE /* MercenaryDemo-Bridging-Header.h */,
 				7E3EE85A2032667B00CB42CB /* pushup */,
 				7EBBFB03201868FC00DA2CFE /* CoreML */,
@@ -504,10 +541,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDA3ECA20453FBB00C92653 /* CacheWebViewViewController.xib in Resources */,
 				7EBBFB0A20186B9F00DA2CFE /* MLDemoViewController.xib in Resources */,
 				D5C9A5FE1B68A0D000219962 /* Main.storyboard in Resources */,
 				D5C9A6031B68A0D000219962 /* LaunchScreen.xib in Resources */,
 				7E00AE121FF235B100B0E16D /* MJRefresh.bundle in Resources */,
+				7EF5B55B207DA69B001EBD0A /* ZM_ProgressiveRingViewController.xib in Resources */,
 				7E00ADD91FF1EECF00B0E16D /* PlaceholderView.xib in Resources */,
 				7E3EE85F2032669500CB42CB /* PushUpViewController.xib in Resources */,
 				7E00ADE01FF1FA8F00B0E16D /* ZMTableViewController.xib in Resources */,
@@ -541,6 +580,8 @@
 				7E00ADA01FF11C5300B0E16D /* ZMAnimationViewController.m in Sources */,
 				7E3EE86220326ADB00CB42CB /* Resnet50.mlmodel in Sources */,
 				7E00AE141FF235B100B0E16D /* NSBundle+MJRefresh.m in Sources */,
+				7EF5B55A207DA69B001EBD0A /* ZM_ProgressiveRingViewController.m in Sources */,
+				7EF5B55E207DA6D9001EBD0A /* ZM_ProgressiveRingView.m in Sources */,
 				7E00AD9B1FF11C2C00B0E16D /* ZMView.m in Sources */,
 				7E3EE86320326ADB00CB42CB /* MobileNet.mlmodel in Sources */,
 				7E00ADA71FF11C7700B0E16D /* DetailViewController.m in Sources */,
@@ -562,6 +603,7 @@
 				7E00AE171FF235B100B0E16D /* MJRefreshBackStateFooter.m in Sources */,
 				7E00AE191FF235B100B0E16D /* MJRefreshAutoStateFooter.m in Sources */,
 				D5C9A5F51B68A0D000219962 /* MercenaryDemo.xcdatamodeld in Sources */,
+				7EDA3EC920453FBB00C92653 /* CacheWebViewViewController.m in Sources */,
 				7E00AE1E1FF235B100B0E16D /* MJRefreshGifHeader.m in Sources */,
 				7E00AE221FF235B100B0E16D /* MJRefreshAutoFooter.m in Sources */,
 				7E00ADDF1FF1FA8F00B0E16D /* ZMTableViewController.m in Sources */,
